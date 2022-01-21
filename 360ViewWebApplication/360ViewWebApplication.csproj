@@ -1,0 +1,590 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3EE8DBB1-34BF-402E-83E4-108CCF39F4BB}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>_360ViewWebApplication</RootNamespace>
+    <AssemblyName>360ViewWebApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44355</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.Designer.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\DevExpress 20.2\Components\Bin\Framework\DevExpress.Charts.Designer.v20.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v20.2.Core, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\DevExpress 20.2\Components\Bin\Framework\DevExpress.Charts.v20.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Dashboard.v20.2.Core, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\DevExpress 20.2\Components\Bin\Framework\DevExpress.Dashboard.v20.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Dashboard.v20.2.Web, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\DevExpress 20.2\Components\Bin\Framework\DevExpress.Dashboard.v20.2.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Dashboard.v20.2.Web.Mvc5, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\DevExpress 20.2\Components\Bin\Framework\DevExpress.Dashboard.v20.2.Web.Mvc5.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Dashboard.v20.2.Web.WebForms, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\DevExpress 20.2\Components\Bin\Framework\DevExpress.Dashboard.v20.2.Web.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.Desktop.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\DevExpress 20.2\Components\Bin\Framework\DevExpress.Data.Desktop.v20.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\DevExpress 20.2\Components\Bin\Framework\DevExpress.Data.v20.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.DataAccess.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\DevExpress 20.2\Components\Bin\Framework\DevExpress.DataAccess.v20.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.DataVisualization.v20.2.Core, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\DevExpress 20.2\Components\Bin\Framework\DevExpress.DataVisualization.v20.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Office.v20.2.Core, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\DevExpress 20.2\Components\Bin\Framework\DevExpress.Office.v20.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Pdf.v20.2.Core, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\DevExpress 20.2\Components\Bin\Framework\DevExpress.Pdf.v20.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v20.2.Core, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\DevExpress 20.2\Components\Bin\Framework\DevExpress.PivotGrid.v20.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v20.2.Core, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\DevExpress 20.2\Components\Bin\Framework\DevExpress.Printing.v20.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v20.2.Core, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\DevExpress 20.2\Components\Bin\Framework\DevExpress.RichEdit.v20.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v20.2.Export, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\DevExpress 20.2\Components\Bin\Framework\DevExpress.RichEdit.v20.2.Export.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v20.2.Core, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\DevExpress 20.2\Components\Bin\Framework\DevExpress.Sparkline.v20.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.SpellChecker.v20.2.Core, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\DevExpress 20.2\Components\Bin\Framework\DevExpress.SpellChecker.v20.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Spreadsheet.v20.2.Core, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\DevExpress 20.2\Components\Bin\Framework\DevExpress.Spreadsheet.v20.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.TreeMap.v20.2.Core, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\DevExpress 20.2\Components\Bin\Framework\DevExpress.TreeMap.v20.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\DevExpress 20.2\Components\Bin\Framework\DevExpress.Utils.v20.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v20.2.UI, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\DevExpress 20.2\Components\Bin\Framework\DevExpress.Utils.v20.2.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxGantt.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\DevExpress 20.2\Components\Bin\Framework\DevExpress.Web.ASPxGantt.v20.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxGauges.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\DevExpress 20.2\Components\Bin\Framework\DevExpress.Web.ASPxGauges.v20.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxHtmlEditor.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\DevExpress 20.2\Components\Bin\Framework\DevExpress.Web.ASPxHtmlEditor.v20.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxPivotGrid.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\DevExpress 20.2\Components\Bin\Framework\DevExpress.Web.ASPxPivotGrid.v20.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxRichEdit.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\DevExpress 20.2\Components\Bin\Framework\DevExpress.Web.ASPxRichEdit.v20.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxScheduler.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\DevExpress 20.2\Components\Bin\Framework\DevExpress.Web.ASPxScheduler.v20.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxSpellChecker.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\DevExpress 20.2\Components\Bin\Framework\DevExpress.Web.ASPxSpellChecker.v20.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxSpreadsheet.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\DevExpress 20.2\Components\Bin\Framework\DevExpress.Web.ASPxSpreadsheet.v20.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxThemes.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\DevExpress 20.2\Components\Bin\Framework\DevExpress.Web.ASPxThemes.v20.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxTreeList.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\DevExpress 20.2\Components\Bin\Framework\DevExpress.Web.ASPxTreeList.v20.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.Mvc5.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\DevExpress 20.2\Components\Bin\Framework\DevExpress.Web.Mvc5.v20.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.Resources.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\DevExpress 20.2\Components\Bin\Framework\DevExpress.Web.Resources.v20.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\DevExpress 20.2\Components\Bin\Framework\DevExpress.Web.v20.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\DevExpress 20.2\Components\Bin\Framework\DevExpress.XtraCharts.v20.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v20.2.UI, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\DevExpress 20.2\Components\Bin\Framework\DevExpress.XtraCharts.v20.2.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v20.2.Web, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\DevExpress 20.2\Components\Bin\Framework\DevExpress.XtraCharts.v20.2.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v20.2.Wizard, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\DevExpress 20.2\Components\Bin\Framework\DevExpress.XtraCharts.v20.2.Wizard.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraDiagram.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\DevExpress 20.2\Components\Bin\Framework\DevExpress.XtraDiagram.v20.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\DevExpress 20.2\Components\Bin\Framework\DevExpress.XtraEditors.v20.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\DevExpress 20.2\Components\Bin\Framework\DevExpress.XtraPrinting.v20.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\DevExpress 20.2\Components\Bin\Framework\DevExpress.XtraTreeList.v20.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeMap.v20.2, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\DevExpress 20.2\Components\Bin\Framework\DevExpress.XtraTreeMap.v20.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeMap.v20.2.UI, Version=20.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\DevExpress 20.2\Components\Bin\Framework\DevExpress.XtraTreeMap.v20.2.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="360_assets\ZoomInOut\cover.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\Filename_01.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\Filename_02.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\Filename_03.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\Filename_04.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\Filename_05.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\Filename_06.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\Filename_07.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\Filename_08.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\Filename_09.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\Filename_10.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\Filename_11.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\Filename_12.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\Filename_13.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\Filename_14.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\Filename_15.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\Filename_16.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\Filename_17.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\Filename_18.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\Filename_19.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\Filename_20.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\Filename_21.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\Filename_22.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\Filename_23.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\Filename_24.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\Filename_25.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\Filename_26.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\Filename_27.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\Filename_28.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\Filename_29.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\Filename_30.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\Filename_31.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\Filename_32.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\Filename_33.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\Filename_34.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\Filename_35.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\Filename_36.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\highres\Filename_01.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\highres\Filename_02.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\highres\Filename_03.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\highres\Filename_04.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\highres\Filename_05.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\highres\Filename_06.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\highres\Filename_07.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\highres\Filename_08.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\highres\Filename_09.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\highres\Filename_10.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\highres\Filename_11.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\highres\Filename_12.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\highres\Filename_13.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\highres\Filename_14.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\highres\Filename_15.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\highres\Filename_16.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\highres\Filename_17.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\highres\Filename_18.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\highres\Filename_19.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\highres\Filename_20.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\highres\Filename_21.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\highres\Filename_22.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\highres\Filename_23.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\highres\Filename_24.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\highres\Filename_25.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\highres\Filename_26.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\highres\Filename_27.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\highres\Filename_28.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\highres\Filename_29.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\highres\Filename_30.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\highres\Filename_31.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\highres\Filename_32.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\highres\Filename_33.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\highres\Filename_34.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\highres\Filename_35.jpg" />
+    <Content Include="360_assets\ZoomInOut\images\highres\Filename_36.jpg" />
+    <Content Include="360_assets\ZoomInOut\ZoomInOut.xml" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="imagerotator\html\css\basic.css" />
+    <Content Include="imagerotator\html\css\empty.css" />
+    <Content Include="imagerotator\html\css\retina.css" />
+    <Content Include="imagerotator\html\css\round.css" />
+    <Content Include="imagerotator\html\css\thin.css" />
+    <Content Include="imagerotator\html\css\zoom_dark.css" />
+    <Content Include="imagerotator\html\css\zoom_light.css" />
+    <Content Include="imagerotator\html\img\basic\circ-cross-thin-blue.svg" />
+    <Content Include="imagerotator\html\img\basic\down.svg" />
+    <Content Include="imagerotator\html\img\basic\fullscreenoff.svg" />
+    <Content Include="imagerotator\html\img\basic\fullscreenon.svg" />
+    <Content Include="imagerotator\html\img\basic\hotspotoff.svg" />
+    <Content Include="imagerotator\html\img\basic\hotspoton.svg" />
+    <Content Include="imagerotator\html\img\basic\left.svg" />
+    <Content Include="imagerotator\html\img\basic\lightbox_close.svg" />
+    <Content Include="imagerotator\html\img\basic\pause.svg" />
+    <Content Include="imagerotator\html\img\basic\pixel.png" />
+    <Content Include="imagerotator\html\img\basic\play.svg" />
+    <Content Include="imagerotator\html\img\basic\pointer-zoom-in.svg" />
+    <Content Include="imagerotator\html\img\basic\pointer-zoom-off.svg" />
+    <Content Include="imagerotator\html\img\basic\pointer-zoom-out.svg" />
+    <Content Include="imagerotator\html\img\basic\right.svg" />
+    <Content Include="imagerotator\html\img\basic\up.svg" />
+    <Content Include="imagerotator\html\img\basic\zoomin.svg" />
+    <Content Include="imagerotator\html\img\basic\zoomout.svg" />
+    <Content Include="imagerotator\html\img\empty\circ-cross-thin-blue.svg" />
+    <Content Include="imagerotator\html\img\empty\fullscreenoff.svg" />
+    <Content Include="imagerotator\html\img\empty\lightbox_close.svg" />
+    <Content Include="imagerotator\html\img\empty\pixel.png" />
+    <Content Include="imagerotator\html\img\empty\pointer-zoom-in.svg" />
+    <Content Include="imagerotator\html\img\empty\pointer-zoom-off.svg" />
+    <Content Include="imagerotator\html\img\empty\pointer-zoom-out.svg" />
+    <Content Include="imagerotator\html\img\retina\circ-cross-thin-blue.svg" />
+    <Content Include="imagerotator\html\img\retina\down.svg" />
+    <Content Include="imagerotator\html\img\retina\fullscreenoff.svg" />
+    <Content Include="imagerotator\html\img\retina\fullscreenon.svg" />
+    <Content Include="imagerotator\html\img\retina\hotspotoff.svg" />
+    <Content Include="imagerotator\html\img\retina\hotspoton.svg" />
+    <Content Include="imagerotator\html\img\retina\left.svg" />
+    <Content Include="imagerotator\html\img\retina\lightbox_close.svg" />
+    <Content Include="imagerotator\html\img\retina\pause.svg" />
+    <Content Include="imagerotator\html\img\retina\pixel.png" />
+    <Content Include="imagerotator\html\img\retina\play.svg" />
+    <Content Include="imagerotator\html\img\retina\pointer-zoom-in.svg" />
+    <Content Include="imagerotator\html\img\retina\pointer-zoom-off.svg" />
+    <Content Include="imagerotator\html\img\retina\pointer-zoom-out.svg" />
+    <Content Include="imagerotator\html\img\retina\right.svg" />
+    <Content Include="imagerotator\html\img\retina\up.svg" />
+    <Content Include="imagerotator\html\img\retina\zoomin.svg" />
+    <Content Include="imagerotator\html\img\retina\zoomout.svg" />
+    <Content Include="imagerotator\html\img\round\circ-cross-thin-blue.svg" />
+    <Content Include="imagerotator\html\img\round\down.svg" />
+    <Content Include="imagerotator\html\img\round\fullscreenoff.svg" />
+    <Content Include="imagerotator\html\img\round\fullscreenon.svg" />
+    <Content Include="imagerotator\html\img\round\hotspotoff.svg" />
+    <Content Include="imagerotator\html\img\round\hotspoton.svg" />
+    <Content Include="imagerotator\html\img\round\left.svg" />
+    <Content Include="imagerotator\html\img\round\lightbox_close.svg" />
+    <Content Include="imagerotator\html\img\round\pause.svg" />
+    <Content Include="imagerotator\html\img\round\pixel.png" />
+    <Content Include="imagerotator\html\img\round\play.svg" />
+    <Content Include="imagerotator\html\img\round\pointer-zoom-in.svg" />
+    <Content Include="imagerotator\html\img\round\pointer-zoom-off.svg" />
+    <Content Include="imagerotator\html\img\round\pointer-zoom-out.svg" />
+    <Content Include="imagerotator\html\img\round\right.svg" />
+    <Content Include="imagerotator\html\img\round\up.svg" />
+    <Content Include="imagerotator\html\img\round\zoomin.svg" />
+    <Content Include="imagerotator\html\img\round\zoomout.svg" />
+    <Content Include="imagerotator\html\img\thin\circ-cross-thin-blue.svg" />
+    <Content Include="imagerotator\html\img\thin\down.svg" />
+    <Content Include="imagerotator\html\img\thin\fullscreenoff.svg" />
+    <Content Include="imagerotator\html\img\thin\fullscreenon.svg" />
+    <Content Include="imagerotator\html\img\thin\hotspotoff.svg" />
+    <Content Include="imagerotator\html\img\thin\hotspoton.svg" />
+    <Content Include="imagerotator\html\img\thin\left.svg" />
+    <Content Include="imagerotator\html\img\thin\lightbox_close.svg" />
+    <Content Include="imagerotator\html\img\thin\pause.svg" />
+    <Content Include="imagerotator\html\img\thin\pixel.png" />
+    <Content Include="imagerotator\html\img\thin\play.svg" />
+    <Content Include="imagerotator\html\img\thin\pointer-zoom-in.svg" />
+    <Content Include="imagerotator\html\img\thin\pointer-zoom-off.svg" />
+    <Content Include="imagerotator\html\img\thin\pointer-zoom-out.svg" />
+    <Content Include="imagerotator\html\img\thin\right.svg" />
+    <Content Include="imagerotator\html\img\thin\up.svg" />
+    <Content Include="imagerotator\html\img\thin\zoomin.svg" />
+    <Content Include="imagerotator\html\img\thin\zoomout.svg" />
+    <Content Include="imagerotator\html\img\zoom_dark\circ-cross-thin-blue.svg" />
+    <Content Include="imagerotator\html\img\zoom_dark\fullscreenoff.svg" />
+    <Content Include="imagerotator\html\img\zoom_dark\fullscreenon.svg" />
+    <Content Include="imagerotator\html\img\zoom_dark\lightbox_close.svg" />
+    <Content Include="imagerotator\html\img\zoom_dark\pixel.png" />
+    <Content Include="imagerotator\html\img\zoom_dark\pointer-zoom-in.svg" />
+    <Content Include="imagerotator\html\img\zoom_dark\pointer-zoom-off.svg" />
+    <Content Include="imagerotator\html\img\zoom_dark\pointer-zoom-out.svg" />
+    <Content Include="imagerotator\html\img\zoom_light\circ-cross-thin-blue.svg" />
+    <Content Include="imagerotator\html\img\zoom_light\fullscreenoff.svg" />
+    <Content Include="imagerotator\html\img\zoom_light\fullscreenon.svg" />
+    <Content Include="imagerotator\html\img\zoom_light\lightbox_close.svg" />
+    <Content Include="imagerotator\html\img\zoom_light\pixel.png" />
+    <Content Include="imagerotator\html\img\zoom_light\pointer-zoom-in.svg" />
+    <Content Include="imagerotator\html\img\zoom_light\pointer-zoom-off.svg" />
+    <Content Include="imagerotator\html\img\zoom_light\pointer-zoom-out.svg" />
+    <Content Include="imagerotator\html\js\imagerotator.js" />
+    <Content Include="imagerotator\html\js\jquery-3.4.1.min.js" />
+    <Content Include="imagerotator\html\js\TestObject.js" />
+    <Content Include="images\outline_360_black_24dp.png" />
+    <Content Include="Javascript\html2canvas.js" />
+    <Content Include="Javascript\html2canvas.min.js" />
+    <Content Include="Javascript\jquery.plugin.html2canvas.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="XML\f1.xml" />
+    <Content Include="360_assets\ZoomInOut\ZoomInOut.pxrtcont" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\360DegreeImageDialogPartial.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="images\highres\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>60349</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:60349/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

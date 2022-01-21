@@ -1,0 +1,56 @@
+﻿@using DevExpress.Web.Mvc;
+@using DevExpress.Web.Mvc.UI
+@using DevExpress.Web;
+@using System.Web.UI.WebControls;
+@using DevExpress.Utils;
+
+@{
+    ViewBag.Title = "Home Page";
+}
+<div style="margin: 16px auto; width: 160px;">
+    @Html.DevExpress().Button(
+        settings =>
+        {
+            settings.Name = "btShowModal";
+            settings.Text = "Load 360 View Window";
+            settings.ClientSideEvents.Click = "function (s, e) { pcModalMode.Show(); }";
+        }
+    ).GetHtml()
+
+</div>
+
+@Html.DevExpress().PopupControl(
+    settings =>
+    {
+        settings.Name = "pcModalMode";
+        settings.Width = 1100;
+        settings.Height = 700;
+        settings.AllowResize = true;
+        settings.AllowDragging = true;
+        settings.CloseAction = CloseAction.CloseButton;
+        settings.CloseOnEscape = true;
+        settings.PopupAnimationType = AnimationType.None;
+        settings.HeaderText = "360 View";
+        settings.Modal = true;
+        settings.AutoUpdatePosition = true;
+        //settings.CallbackRouteValues = new { Controller = "Home", Action = "LoadOnDemandPartial" };
+        settings.PopupHorizontalAlign = PopupHorizontalAlign.WindowCenter;
+        settings.PopupVerticalAlign = PopupVerticalAlign.WindowCenter;
+
+
+        settings.ContentUrl = "/Home/Load360DegreeImageDialogPartial";
+
+        //settings.SetContent(() =>
+        //{
+        //    Html.RenderPartial("DegreeImageDialogPartial");
+        //});
+
+
+        //settings.ClientSideEvents.CloseUp = "function(s, e) { pcModalMode.PerformCallback(); }";
+        //settings.ClientSideEvents.CloseUp = "function(s, e) { loadcontainerfor360(); }";
+        settings.ClientSideEvents.CloseUp = "function(s, e) { s.SetContentUrl('/Home/Load360DegreeImageDialogPartial') }";
+
+
+
+    }).GetHtml()
+

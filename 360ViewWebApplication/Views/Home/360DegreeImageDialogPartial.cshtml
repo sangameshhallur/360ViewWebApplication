@@ -1,0 +1,57 @@
+﻿@using DevExpress.Web.Mvc;
+@using DevExpress.Web.Mvc.UI
+@using DevExpress.Web;
+@using System.Web.UI.WebControls;
+@using DevExpress.Utils;
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<link type="text/css" rel="stylesheet" href="~/imagerotator/html/css/basic.css" />
+<script src="@Url.Content("~/Scripts/jquery-3.4.1.min.js")" type="text/javascript"></script>
+<script type="text/javascript" src="~/imagerotator/html/js/imagerotator.js"></script>
+
+<style type="text/css">
+
+    html, body {
+        padding: 0;
+        margin: 0;
+    }
+
+    #content {
+        width: 665px;
+        height: 505px;
+    }
+</style>
+<body>
+    <div id="content" style="width:1000px; height:600px">
+
+        <div id="wr360PlayerId" class="wr360_player" style="background-color:#FFFFFF;">
+            <script>
+
+                jQuery(document).ready(loadcontainerfor360);
+
+                function loadcontainerfor360() {
+                    console.log("Load popup content")
+                    if ($('#wr360PlayerId').is(':visible')) {
+
+                        jQuery('#wr360PlayerId').rotator({
+
+                            configFileURL: '../360_assets/ZoomInOut/ZoomInOut.xml',
+                            graphicsPath: '../imagerotator/html/img/basic',
+                            alt: '360 degree view - ZoomInOut',
+                            googleEventTracking: false
+
+                        });
+                    }
+                    else {
+                        setTimeout(loadcontainerfor360, 1);
+                    }
+                }
+            </script>
+        </div>
+    </div>
+
+</body>
+
